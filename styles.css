@@ -54,16 +54,16 @@ main {
 
 /* Footer */
 .custom-footer {
-  background-color: #008080; /* same as navbar */
+  /* background-color: #008080; */
   color: white;
-  padding: 5px 0;
+  padding: 3px 0;
   text-align: center;
 }
 
 .custom-footer a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 4px;
+  margin: 0 2px;
 }
 
 .custom-footer a:hover {
