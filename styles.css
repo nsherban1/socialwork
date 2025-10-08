@@ -67,6 +67,17 @@ body.fees-page .navbar {
 }
 body.contact-page .navbar {
   background-color: #5f728c; /* calming blue */
+  background-color: rgba(95,114,140,0.85);
+  position: relative;
+  z-index: 10; /* ensures it’s above overlay */
+}
+
+body.contact-page .navbar .nav-link {
+  color: white; /* ensure links are white */
+}
+
+body.contact-page .navbar .nav-link:hover {
+  color: #d1f0f0; /* light teal on hover */
 }
 
 
