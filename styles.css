@@ -14,7 +14,7 @@ body {
 
 /* Home page background */
 body.home-page {
-  background: url("nature4.jpg") no-repeat center center fixed;
+  background: url("nature.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -57,16 +57,16 @@ main {
   padding-bottom: 1.4rem;
 }
 body.home-page .navbar {
-  background-color: #71aef4; /* light blue */
+  background-color: #6a955a; /* light green */
 }
 body.about-page .navbar {
-  background-color: #8c6653; /* light brown */
-}
-body.contact-page .navbar {
-  background-color: #2a6e98; /* calming blue */
+  background-color: #8c6f60; /* light brown */
 }
 body.fees-page .navbar {
-  background-color: #1e4b8a; /* calming blue */
+  background-color: #2a6e98; /* calming blue */
+}
+body.contact-page .navbar {
+  background-color: #5f728c; /* calming blue */
 }
 
 
