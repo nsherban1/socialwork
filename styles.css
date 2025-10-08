@@ -8,10 +8,32 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: url("mtnpic.jpg") no-repeat center center fixed;
-  background-size: cover;
   font-family: Arial, sans-serif;
   color: white;
+}
+
+/* Home page background */
+body.home-page {
+  background: url("nature4.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* About page background */
+body.about-page {
+  background: url("nature2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Fees page background */
+body.fees-page {
+  background: url("nature1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Contact page background */
+body.contact-page {
+  background: url("nature5.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Optional dark overlay for readability */
