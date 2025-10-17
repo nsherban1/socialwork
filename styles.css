@@ -10,6 +10,8 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   color: white;
+  margin: 0;
+  background-color: #f0f0f0;
 }
 
 /* Home page background */
@@ -49,68 +51,95 @@ body::before {
 /* Make main content expand and push footer */
 main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align slides to top */
+  margin-top: 20px;
 }
 
 /* Navbar: taller with right-aligned links */
 .navbar {
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
-}
-body.home-page .navbar {
-  background-color: #6a955a; /* light green */
-}
-body.about-page .navbar {
-  background-color: #8c6f60; /* light brown */
-}
-body.fees-page .navbar {
-  background-color: #2a6e98; /* calming blue */
-}
-body.contact-page .navbar {
-  background-color: #5f728c; /* calming blue */
-  background-color: rgba(95,114,140,0.85);
   position: relative;
-  z-index: 10; /* ensures it’s above overlay */
+  z-index: 10;
 }
+body.home-page .navbar { background-color: #6a955a; }
+body.about-page .navbar { background-color: #8c6f60; }
+body.fees-page .navbar { background-color: #2a6e98; }
+body.contact-page .navbar { background-color: rgba(95,114,140,0.85); }
 
-body.contact-page .navbar .nav-link {
-  color: white; /* ensure links are white */
-}
+body.contact-page .navbar .nav-link { color: white; }
+body.contact-page .navbar .nav-link:hover { color: #d1f0f0; }
 
-body.contact-page .navbar .nav-link:hover {
-  color: #d1f0f0; /* light teal on hover */
-}
-
-
-.navbar-nav {
-  display: flex;
-  justify-content: right;
-  width: 100%;
-}
-
-.navbar-nav .nav-item {
-  margin: 0 15px;
-}
+.navbar-nav { display: flex; justify-content: right; width: 100%; }
+.navbar-nav .nav-item { margin: 0 15px; }
 
 /* Content styling */
-.content {
-  padding: 60px;
-  text-align: center;
+.content { padding: 60px; text-align: center; }
+
+/* Slide content */
+.slide-content {
+  max-width: 650px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 20px;
+  color: white;
 }
+
+/* Slider styling */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  /* removed fixed height for dynamic sizing */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  flex-direction: row;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align text to top */
+  color: white;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.7); }
 
 /* Footer */
 .custom-footer {
-  /* background-color: #008080; */
   color: white;
   padding: 3px 0;
   text-align: center;
 }
-
 .custom-footer a {
   color: #ffffff;
   text-decoration: none;
   margin: 0 2px;
 }
-
-.custom-footer a:hover {
-  text-decoration: underline;
-}
+.custom-footer a:hover { text-decoration: underline; }
