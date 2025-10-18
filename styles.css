@@ -131,6 +131,80 @@ body.contact-page .navbar .nav-link:hover { color: #d1f0f0; }
 .next { right: 10px; }
 .prev:hover, .next:hover { background-color: rgba(0,0,0,0.7); }
 
+/* Left-align paragraph card */
+.left-paragraph {
+  margin: 0 auto;           /* center card within max-width container */
+  text-align: left;          /* align text to left */
+  /* font-family: 'Georgia', serif; */
+  font-size: 1.25rem;        /* bigger font */
+  line-height: 1.8;          /* more readable line spacing */
+  padding: 30px;             /* extra padding */
+  max-width: 700px;
+  font-family: 'Lora', serif;
+          /* keep card width manageable */
+}
+.content-left-card {
+  max-width: 700px;
+  margin-left: 50px;  /* Adjust as needed */
+}
+
+.right-paragraph {
+  margin: 0 auto;           /* center card within max-width container */
+  text-align: right;          /* align text to left */
+  /* font-family: 'Georgia', serif; */
+  font-size: 1.25rem;        /* bigger font */
+  line-height: 1.8;          /* more readable line spacing */
+  padding: 30px;             /* extra padding */
+  max-width: 700px;
+  font-family: 'Lora', serif;
+          /* keep card width manageable */
+}
+.content-right-card {
+  max-width: 700px;
+  margin-left: 600px;  /* Adjust as needed */
+}
+
+/* Section backgrounds */
+.section-bg {
+  background: url("nature.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 200px; /* space to scroll */
+}
+
+.section-bg1 {
+  background: url("nature2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 200px; /* space to scroll */
+}
+
+.section-white {
+  background: white;
+  color: black;
+  padding-bottom: 200px;
+}
+
+/* Remove the dark overlay on second section if unwanted */
+.section-white .card {
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* SECTION 3 - Solid Green Background */
+.section-green {
+  background-color: #6a955a; /* Same as navbar */
+  padding-bottom: 200px;
+}
+.section-green .card {
+  border: none;
+}
+
+/* Optional: soften transition between sections */
+.section {
+  transition: background 0.5s ease-in-out;
+}
+
+
+
+
 /* Footer */
 .custom-footer {
   color: white;
