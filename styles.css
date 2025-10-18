@@ -65,7 +65,7 @@ main {
   z-index: 10;
 }
 body.home-page .navbar { background-color: #6a955a; }
-body.about-page .navbar { background-color: #8c6f60; }
+body.about-page .navbar { background-color: #83705e; }
 body.fees-page .navbar { background-color: #2a6e98; }
 body.contact-page .navbar { background-color: rgba(95,114,140,0.85); }
 
@@ -77,6 +77,28 @@ body.contact-page .navbar .nav-link:hover { color: #d1f0f0; }
 
 /* Content styling */
 .content { padding: 60px; text-align: center; }
+
+.card {
+  border-radius: 20px; /* Adjust value for roundness */
+  font-weight: bold; /* makes all text in the card bold */
+
+}
+
+.card-green {
+  background-color: rgba(106, 149, 90, 0.7); /* green with 70% opacity */
+  color: black;
+  font-weight: bold; /* makes all text in the card bold */
+  border-radius: 20px; /* optional, rounder edges */
+}
+
+.card-brown {
+  background-color: rgba(158, 133, 104, 0.7); /* 70% opacity */
+  color: black;
+  font-weight: bold; /* makes all text in the card bold */
+  border-radius: 20px; /* optional, rounder edges */
+}
+
+
 
 /* Slide content */
 .slide-content {
@@ -179,6 +201,12 @@ body.contact-page .navbar .nav-link:hover { color: #d1f0f0; }
 
 .section-white {
   background: white;
+  color: black;
+  padding-bottom: 200px;
+}
+
+.section-brown {
+  background: #83705e;
   color: black;
   padding-bottom: 200px;
 }
