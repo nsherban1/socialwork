@@ -1,0 +1,247 @@
+/* Ensure footer stays at bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+/* Home page background */
+body.home-page {
+  background: url("nature.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* About page background */
+body.about-page {
+  background: url("nature2.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Fees page background */
+body.fees-page {
+  background: url("nature1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Contact page background */
+body.contact-page {
+  background: url("nature5.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Optional dark overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: -1;
+}
+
+/* Make main content expand and push footer */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align slides to top */
+  margin-top: 20px;
+}
+
+/* Navbar: taller with right-aligned links */
+.navbar {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  position: relative;
+  z-index: 10;
+}
+body.home-page .navbar { background-color: #6a955a; }
+body.about-page .navbar { background-color: #83705e; }
+body.fees-page .navbar { background-color: #2a6e98; }
+body.contact-page .navbar { background-color: rgba(95,114,140,0.85); }
+
+body.contact-page .navbar .nav-link { color: white; }
+body.contact-page .navbar .nav-link:hover { color: #d1f0f0; }
+
+.navbar-nav { display: flex; justify-content: right; width: 100%; }
+.navbar-nav .nav-item { margin: 0 15px; }
+
+/* Content styling */
+.content { padding: 60px; text-align: center; }
+
+.card {
+  border-radius: 20px; /* Adjust value for roundness */
+  font-weight: bold; /* makes all text in the card bold */
+
+}
+
+.card-green {
+  background-color: rgba(106, 149, 90, 0.7); /* green with 70% opacity */
+  color: black;
+  font-weight: bold; /* makes all text in the card bold */
+  border-radius: 20px; /* optional, rounder edges */
+}
+
+.card-brown {
+  background-color: rgba(158, 133, 104, 0.7); /* 70% opacity */
+  color: black;
+  font-weight: bold; /* makes all text in the card bold */
+  border-radius: 20px; /* optional, rounder edges */
+}
+
+
+
+/* Slide content */
+.slide-content {
+  max-width: 650px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 20px;
+  color: white;
+}
+
+/* Slider styling */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  /* removed fixed height for dynamic sizing */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  flex-direction: row;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align text to top */
+  color: white;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.7); }
+
+/* Left-align paragraph card */
+.left-paragraph {
+  margin: 0 auto;           /* center card within max-width container */
+  text-align: left;          /* align text to left */
+  /* font-family: 'Georgia', serif; */
+  font-size: 1.25rem;        /* bigger font */
+  line-height: 1.8;          /* more readable line spacing */
+  padding: 30px;             /* extra padding */
+  max-width: 700px;
+  font-family: 'Lora', serif;
+          /* keep card width manageable */
+}
+.content-left-card {
+  max-width: 700px;
+  margin-left: 50px;  /* Adjust as needed */
+}
+
+.right-paragraph {
+  margin: 0 auto;           /* center card within max-width container */
+  text-align: right;          /* align text to left */
+  /* font-family: 'Georgia', serif; */
+  font-size: 1.25rem;        /* bigger font */
+  line-height: 1.8;          /* more readable line spacing */
+  padding: 30px;             /* extra padding */
+  max-width: 700px;
+  font-family: 'Lora', serif;
+          /* keep card width manageable */
+}
+.content-right-card {
+  max-width: 700px;
+  margin-left: 600px;  /* Adjust as needed */
+}
+
+/* Section backgrounds */
+.section-bg {
+  background: url("nature.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 200px; /* space to scroll */
+}
+
+.section-bg1 {
+  background: url("nature2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  padding-bottom: 200px; /* space to scroll */
+}
+
+.section-white {
+  background: white;
+  color: black;
+  padding-bottom: 200px;
+}
+
+.section-brown {
+  background: #83705e;
+  color: black;
+  padding-bottom: 200px;
+}
+
+/* Remove the dark overlay on second section if unwanted */
+.section-white .card {
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* SECTION 3 - Solid Green Background */
+.section-green {
+  background-color: #6a955a; /* Same as navbar */
+  padding-bottom: 200px;
+}
+.section-green .card {
+  border: none;
+}
+
+/* Optional: soften transition between sections */
+.section {
+  transition: background 0.5s ease-in-out;
+}
+
+
+
+
+/* Footer */
+.custom-footer {
+  color: white;
+  padding: 3px 0;
+  text-align: center;
+}
+.custom-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 2px;
+}
+.custom-footer a:hover { text-decoration: underline; }
